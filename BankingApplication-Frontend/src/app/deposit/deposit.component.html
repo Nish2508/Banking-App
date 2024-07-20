@@ -1,35 +1,25 @@
-<!-- <p>deposit works!</p> -->
 
 
-<div class="col-md-8 offset-md-3">
+<div class="container surround">
     <h1 class="text-center">Deposit</h1>
 
     <div *ngIf="successMessage" class="alert alert-success">
-
         {{successMessage}}
-
     </div>
 
     <div *ngIf="errorMessage" class="alert alert-danger">
-
         {{errorMessage}}
-
     </div>
 
-<form (ngSubmit)="onSubmit()">
-    
-    <div>
+    <form (ngSubmit)="onSubmit()" class="form-centered">
+        <div class="form-group">
+            <label for="depositAmount">Amount</label>
+            <input type="text" id="depositAmount" class="form-control" name="depositAmount" placeholder="Enter Amount"
+            [(ngModel)]="depositAmount"/>
+        </div>
 
-        <label>Balance</label>
-        <input type="'text" id="balance" class="form-control" name="balance" placeholder="Enter Balance"
+        <br>
 
-        [(ngModel)]="account.balance"/>
-
-    </div>
-
-    <br>
-
-    <button type="submit" class="btn btn-success">Submit</button>
-
-</form>
+        <button type="submit" class="btn btn-success btn-custom">Submit</button>
+    </form>
 </div>

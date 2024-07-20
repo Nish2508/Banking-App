@@ -1,33 +1,27 @@
-<!-- <p>account-list works!</p> -->
-<table class="table table-triped">
-    
 
-    <thead class="table table-dark">
+<div class="back">
+    <div class="all">
+        <div class="bank" *ngFor="let account of accounts">
+            <mat-card>
+                <div class="title">
+                    <mat-card-title class="first">ID: {{ account.id }}</mat-card-title>
+                    <mat-card-content class="first">BALANCE: {{ account.balance }}</mat-card-content>
+                </div>
+                <img mat-card-image src="data:image/png;base64,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" alt="Account Holder Image">
+                <mat-card-content class="name">{{ account.accountHolderName }}</mat-card-content>
+                <div class="buttonClass">
+                    <button (click)="deposit(account.id)" class="btn">Deposit</button>
+                    <button (click)="withdraw(account.id)" class="btn">Withdraw</button>
+                </div>
+                <div class="buttonClass">
+                    <button (click)="delete(account.id)" class="btn">Delete</button>
+                    <button (click)="view(account.id)" class="btn">View</button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
 
-        <th>ID</th>
-        <th>AccountHolderName</th>
-        <th>Balance</th>
-        <th>Action</th>
-    </thead>
 
-    <tbody>
-
-        <tr *ngFor="let account of accounts">
   
-          <Td>{{account.id}}</Td>
-          <td>{{account.accountHolderName}}</td>
-          <td>{{account.balance}}</td>
-          <td (click)="deposit(account.id)" class="btn btn-info" style="margin:10px;">Deposit</td>
-          <td (click)="withdraw(account.id)" class="btn btn-info" style="margin:10px;">Withdraw</td>
-          <td (click)="delete(account.id)" class="btn btn-danger" style="margin:10px;">Delete Account</td>
-
-          <td (click)="view(account.id)" class="btn btn-success" style="margin:10px;">View Details</td> 
-        </tr>
-    </tbody>
-
-
-
-
-
-
-</table>
+ 

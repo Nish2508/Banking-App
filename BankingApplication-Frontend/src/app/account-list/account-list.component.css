@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+}
+mat-card {
+    border: solid;
+    border-width: 2px;
+    width: 250px;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    align-items: center;
+    background-color: #ffffff;
+}
+.bank > mat-card {
+    transition: 0.4s ease;
+}
+mat-card:hover {
+    scale: 1.02;
+    box-shadow: 10px 26px 100px rgba(0, 0, 0, 0.648);
+}
+.back {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    width: 100%;
+}
+.all {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2em;
+}
+.bank {
+    padding: 1em;
+}
+.btn {
+    margin: 10px;
+    width: 100px;
+    border-radius: 30em;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    position: relative;
+}
+.btn::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, rgba(87,15,54,1) 22%, rgba(213,190,207,1) 100%);
+    transition: 0.5s ease;
+    z-index: -1;
+}
+.btn:hover {
+    color: #ffffff;
+}
+.btn:hover::before {
+    width: 8em;
+}
+.buttonClass {
+    display: flex;
+}
+.title {
+    display: flex;
+    justify-content: space-around;
+}
+img {
+    width: 10em;
+    height: 10em;
+}
+.name {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    font-size: larger;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .buttonClass {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .all {
+        flex-direction: column;
+        align-items: center;
+    }
+    mat-card {
+        width: 90%;
+    }
+    .title {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 90px;
+        margin: 5px 0;
+    }
+    img {
+        width: 8em;
+        height: 8em;
+    }
+}

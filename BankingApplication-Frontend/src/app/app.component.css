@@ -1,0 +1,26 @@
+mat-toolbar {
+    background-image: linear-gradient(90deg, rgba(87,15,54,1) 22%, rgba(213,190,207,1) 100%);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+.copyright {
+    color: white;
+    font-size: 0.75rem;
+}
+router-outlet {
+    background-color: aqua;
+}
+/* .container {
+    background-image: url("");
+} */
+h1 {
+    text-align: center;
+    color:lightslategrey;
+}
+a {
+    text-decoration: none;
+    color: ghostwhite;
+}
